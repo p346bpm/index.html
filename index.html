@@ -1,4 +1,4 @@
-<cartao programa>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -30,7 +30,7 @@
             background-color: var(--bg-dark);
             color: var(--text-main);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            overflow: hidden; /* Mantém o cabeçalho fixo e a tabela rolável */
+            overflow: auto; /* CORRIGIDO: Permite a rolagem geral da página */
             display: flex;
             flex-direction: column;
         }
@@ -92,7 +92,7 @@
         .table-container {
             flex: 1;
             width: 100%;
-            height: 100%;
+            min-height: 0; /* CORRIGIDO: Permite que o flex item encolha e ative o scroll interno */
             overflow: auto; /* Garante as barras de rolagem vertical e horizontal */
             position: relative;
             background-color: var(--bg-dark);
@@ -266,201 +266,4 @@
             "VIATURA RP3": [
                 "CHAMADA E INSTRUÇÃO", "PATRULHAMENTO SETOR 3", "PATRULHAMENTO SETOR 3\nPONTO BASE ESCOLA MARIA ISABEL DE QUEIROZ (CAIC)", "PATRULHAMENTO SETOR 3\nPONTO BASE ESCOLA ORMY ARAUJO AMARAL",
                 "PATRULHAMENTO SETOR 3\nPONTO BASE ESCOLA IRMA DE CARVALHO", "PATRULHAMENTO SETOR 3", "PATRULHAMENTO SETOR 3", "PATRULHAMENTO SETOR 3",
-                "PONTO BASE ESCOLA PROFESSORA CELIA LEMOS", "PATRULHAMENTO SETOR 3", "PATRULHAMENTO SETOR 3\nPONTO BASE ESCOLA CEL JOAO CANDIDO DE AGUIAR", "PONTO BASE ESCOLA MARIA ISABEL DE QUEIROZ CAIC",
-                "PATRULHAMENTO SETOR 3\nPONTO BASE ESCOLA ORMY ABALUJO AMARAL", "PATRULHAMENTO SETOR 3", "PONTO BASE ESCOLA IRMA DE CARVALHO\nPATRULHAMENTO SETOR 3", "PONTO BASE ESCOLA PROFESSORA CELIA LEMOS\nPATRULHAMENTO SETOR 3",
-                "PONTO BASE ESCOLA MARIA ISABEL DE QUEIROZ CAIC\nPATRULHAMENTO SETOR 3", "PONTO BASE AV BRASIL/AV RUFINA A JESUS", "PATRULHAMENTO SETOR 3\nPONTO BASE AV FARIA PEREIRA/MG 230", "REGISTROS E ENCERRAMENTO DO TURNO",
-                "", "", "", "", "", "", "", "", "", "", "", "", "", ""
-            ],
-            "VIATURA RP4": [
-                "CHAMADA E INSTRUÇÃO", "PATRULHAMENTO SETOR 4", "PONTO BASE ESCOLA JOSE EDUARDO DE AQUINO\nPATRULHAMENTO SETOR 4", "PONTO BASE ESCOLA DOM LUSTOSA\nPATRULHAMENTO SETOR 4",
-                "PONTO BASE ESCOLA TEREZINHA MOREIRA MARRA\nPATRULHAMENTO SETOR 4", "PONTO BASE ESCOLA LIBIA LASSI", "PATRULHAMENTO SETOR 4", "PONTO BASE ESCOLA CEL JOAO CANDIDO DE AGUIAR",
-                "PATRULHAMENTO SETOR 4", "PATRULHAMENTO SETOR 4", "PONTO BASE ESCOLA HONORATO BORGES", "PATRULHAMENTO SETOR 4",
-                "PONTO BASE ESCOLA ROGERIO LEONARDO DE OLIVEIRA\nPATRULHAMENTO SETOR 4", "PONTO BASE ESCOLA IRAIDES ANA CONSTANTINO", "PATRULHAMENTO SETOR 4\nPONTO BASE ESCOLA JOSE EDUARDO DE AQUINO", "PATRULHAMENTO SETOR 4\nPONTO BASE ESCOLA DOM LUSTOSA",
-                "PATRULHAMENTO SETOR 4\nPONTO BASE ESCOLA TEREZINHA MOREIRA MARRA", "PONTO BASE AV MARCIANO PIRES/RUA JOSE FELICIANO\nPATRULHAMENTO SETOR 4", "PONTO BASE AV MARCIANO PIRES/RUA JOSE FELICIANO\nPATRULHAMENTO SETOR 4", "REGISTROS E ENCERRAMENTO DO TURNO",
-                "", "", "", "", "", "", "", "", "", "", "", "", "", ""
-            ],
-            "VIATURA RP5": [
-                "", "", "CHAMADA E INSTRUÇÃO\nPATRULHAMENTO SETOR 1", "PONTO BASE ESCOLA DONA MULATA\nPATRULHAMENTO SETOR 1",
-                "PONTO BASE ESCOLA DOM LUSTOSA", "PONTO BASE ESCOLA APAE", "PATRULHAMENTO SETOR 1", "PONTO BASE ESCOLA PROFESSOR OLIMPIO DOS SANTOS",
-                "PATRULHAMENTO SETOR 1", "PONTO BASE ESCOLA BERLLAR", "PONTO BASE ESCOLA PROFESSOR OLIMPIO DOS SANTOS\nPATRULHAMENTO SETOR 1", "PONTO BASE ESCOLA AMIR AMARAL",
-                "PATRULHAMENTO SETOR 1\nPONTO BASE ESCOLA ATENAS", "PATRULHAMENTO SETOR 1\nPONTO BASE ESCOLA NELY AMARAL", "PATRULHAMENTO SETOR 1\nPONTO BASE ESCOLA DALVA ESTELA DE QUEIROZ", "PONTO BASE ESCOLA IRMA GISLENE\nPATRULHAMENTO SETOR 2",
-                "PATRULHAMENTO SETOR 1\nPONTO BASE ESCOLA ATENAS", "PONTO BASE ESCOLA IRMA GISLENE\nPATRULHAMENTO SETOR 2", "PONTO BASE AV FARIA PEREIRA/AV JOSE ELOLDOS SANTOS\nPATRULHAMENTO SETOR 1", "PONTO BASE AV FARIA PEREIRA/AV RUI BARBOSA\nPATRULHAMENTO SETOR 1",
-                "REGISTROS E ENCERRAMENTO DO TURNO", "", "", "", "", "", "", "", "", "", "", "", "", ""
-            ],
-            "VIATURA RP6": [
-                "", "", "CHAMADA E INSTRUÇÃO\nPONTO BASE ESCOLA WALMA DE OLIVEIRA", "PONTO BASE ESCOLA MARIANA TAVARES\nPATRULHAMENTO SETOR 1",
-                "PONTO BASE ESCOLA CASSIMIRO DE ABREU\nPATRULHAMENTO SETOR 2", "PATRULHAMENTO SETOR 2", "PONTO BASE ESCOLA JOÃO BERALDO", "PONTO BASE ESCOLA JOAQUIM DIAS",
-                "PONTO BASE ESCOLA AMIR AMARAL", "PONTO BASE ESCOLA DALVA ESTELA DE QUEIROZ\nPATRULHAMENTO SETOR 2", "PONTO BASE ESCOLA IRMA GISLENE\nPATRULHAMENTO SETOR 2", "PONTO BASE ESCOLA JOAQUIM DIAS",
-                "PONTO BASE RJA PRESIDENTE VARGAS-PRACA HONORATO BORGES", "PONTO BASE RJA PRESIDENTE VARGAS-PRACA MATRIZ", "REGISTROS E ENCERRAMENTO DO TURNO", "",
-                "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""
-            ],
-            "VIATURA BCM": [
-                "", "", "CHAMADA E INSTRUÇÃO\nPONTO BASE NA PORTARIA PRINCIPAL DO PREDIO DO FORUM", "PONTO BASE NA PORTARIA PRINCIPAL DO PREDIO DO FORUM",
-                "PONTO BASE NA PORTARIA PRINCIPAL DO PREDIO DO FORUM", "PONTO BASE NA PORTARIA PRINCIPAL DO PREDIO DO FORUM", "PONTO BASE NA PORTARIA PRINCIPAL DO PREDIO DO FORUM", "PONTO BASE NA PORTARIA PRINCIPAL DO PREDIO DO FORUM",
-                "PONTO BASE NA PORTARIA PRINCIPAL DO PREDIO DO FORUM", "PONTO BASE NA PORTARIA PRINCIPAL DO PREDIO DO FORUM", "PONTO BASE NA PORTARIA PRINCIPAL DO PREDIO DO FORUM", "PONTO BASE NA PORTARIA PRINCIPAL DO PREDIO DO FORUM",
-                "CHAMADA E INSTRUÇÃO\nPONTO BASE NA PORTARIA PRINCIPAL DO PREDIO DO FORUM", "PONTO BASE NA PORTARIA PRINCIPAL DO PREDIO DO FORUM", "PONTO BASE NA PORTARIA PRINCIPAL DO PREDIO DO FORUM", "PONTO BASE NA PORTARIA PRINCIPAL DO PREDIO DO FORUM",
-                "PONTO BASE NA PORTARIA PRINCIPAL DO PREDIO DO FORUM", "PONTO BASE NA PORTARIA PRINCIPAL DO PREDIO DO FORUM", "PONTO BASE NA PORTARIA PRINCIPAL DO PREDIO DO FORUM", "PONTO BASE NA PORTARIA PRINCIPAL DO PREDIO DO FORUM",
-                "REGISTROS E ENCERRAMENTO DO TURNO", "", "", "", "", "", "", "", "", "", "", "", "", ""
-            ],
-            "VIATURA RP7": [
-                "", "DESLOCAMENTO PARA PONTO BASE", "PONTO BASE CC. TEJUCO-PTC4605\nDESLOCAMENTO PARA PONTO BASE", "PONTO BASE CC SAO BENEDITO PTCS178\nDESLOCAMENTO PARA PONTO BASE",
-                "PONTO BASE CC SANTO ANT LAGOA SECA-PTC5009", "DESLOCAMENTO PARA PONTO BASE", "PONTO BASE ESCOLA MUNICIPAL JOAO B ROMAO (CHAPADAO DE FERRO) PTCS183", "PONTO BASE ESCOLA MUNICIPAL JOAO ROMAO (CHAPADÃO DE FERRO) PTCS183",
-                "DESLOCAMENTO PARA PONTO BASE\nPONTO BASE CC MORRO ALTO-PTC5231", "PATRULHAMENTO SETOR 1/2", "PONTO BASE CC MALHADOURO-PTC1972\nDESLOCAMENTO PARA PONTO BASE", "PONO BASE CC BARRA DO SALITRE-PTC5082\nPATRULHAMENTO REGIAO DE SAO BENEDITO SALITRE DE MINAS",
-                "PATRULHAMENTO REGIÃO DE SAO BENEDITO SALITRE DE MINAS", "PATRULHAMENTO SETOR 4\nPONTO BASE PRACA DA SAUDE MORADA NOVA", "PONTO BASE AV DOM JOSE ANDRE COIMBRA/AV FARIA PEREIRA\nPATRULHAMENTO SETOR 4", "PATRULHAMENTO SETOR 4\nPONTO BASE AV MARCIANO PIRES/RUA JOSE FELICIANO",
-                "PATRULHAMENTO SETOR 4", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""
-            ],
-            "VIATURA RP8": [
-                "", "DESLOCAMENTO PARA PONTO BASE", "PONTO BASE CO SAMAMBAIA-PTC4541\nDESLOCAMENTO PARA PONTO BASE", "PONTO BASE POLIESPORTIVO FRANCISCO IN PENA (SALITRE DE MINAS PTC5176)\nDESLOCAMENTO PARA PONTO BASE",
-                "PONTO BASE CC DOURADOS-PTC4845", "DESLOCAMENTO PARA PONTO BASE", "PONTO BASE CC CAXAMBU-PTC0279", "DESLOCAMENTO PARA PONTO BASE",
-                "PONTO BASE ESCOLA ESTADUAL ODILON BEHRENS\nISAO JOÃO DA SERRA NEGRA\nDESLOCAMENTO PARA PONTO BASE", "DESLOCAMENTO PARA PONTO BASE", "PONTO BASE CC ESMERIL-PTC1835\nDESLOCAMENTO PARA PONTO BASE", "PONTO BASE ESCOLA ESTADUAL QRILON BEHRENS (SAO JOÃO DA SERRA NEGRA)\nPONTO BASE ESCOLA ESTADUAL ODILON BEHRENS (SAO JOAO DA SERRA NEGRA)",
-                "PATRULHAMENTO REGIÃO DE SAO JOÃO DA SERRA NEGRA/ESTRADA DOS DOURADOS", "PATRULHAMENTO SETOR 2\nPONTO BASE AV JOAD FURTADO DE OLIVEIRA\nENTRADA BOSQUE DA MATINHA", "PATRULHAMENTO SETOR 2\nPONTO BASE AV RUL BARBOSA/AV JACINTO BARBOSA", "PATRULHAMENTO SETOR 2\nPONTO BASE AY JACINTO BARBOSA/AV JOAQ FURTADO DE OLIVEIRA",
-                "PATRULHAMENTO SETOR 2", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""
-            ],
-            "VIATURA PTR1": [
-                "CHAMADA E INSTRUÇÃO", "DESLOCAMENTO PARA PONTO BASE", "PONTO BASE ESCOLA ESTADUAL AUGUSTO AFONSO-SANTA LUZIA DOS BARROS PTC5173\nDESLOCAMENTO PARA PONTO BASE", "PONTO BASE ESCOLA MUNICIPAL JOAQUIM MARTINS (PTC5186)\nDESLOCAMENTO PARA PONTO BASE",
-                "DESLOCAMENTO PARA PONTO BASE", "DESLOCAMENTO PARA PONTO BASE", "PONTO BASE ESCOLA ELISA V BOTELHO ISTO A DO QUEBRANZOL)-PTC5242", "PONTO BASE ESCOLA ELISA V BOTELHO (STO A DO QUEBRANZOL)-P1C5242\nDESLOCAMENTO PARA PONTO BASE",
-                "DESLOCAMENTO PARA PONTO BASE", "PONTO BASE ESCOLA ESTADUAL DONA COTINHA (BOA VISTA PTC5182)", "PONTO BASE ESCOLA ESTADUAL ELMIRO ALVES (SILVANO)-PTC5166\nDESLOCAMENTO PARA PONTO BASE", "DESLOCAMENTO PARA PONTO BASE\nPONO BASE CC CORREGO DA MATA -PTC2725",
-                "PONTO BASE NA COMUNIDADE DO SILVANO", "REGISTROS E ENCERRAMENTO DO TURNO", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""
-            ],
-            "VIATURA PTR2": [
-                "CHAMADA E INSTRUÇÃO", "DESLOCAMENTO PARA PONTO BASE", "", "PONTO BASE CC PULADOURO-PTC5233\nDESLOCAMENTO PARA PONTO BASE",
-                "DESLOCAMENTO PARA PONTO BASE\nPONTO BASE.CO DIVISA-PTC4212", "", "", "",
-                "PONTO BASE ESCOLA MUNICIPAL FRANCISCO ALVES PEREIRA (MATA DO SILVANO)-PTC5243", "", "", "",
-                "PONTO BASE NA COMUNIDADE DO SILVANO", "REGISTROS E ENCERRAMENTO DO TURNO", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""
-            ],
-            "VIATURA PTR3": [
-                "CHAMADA E INSTRUÇÃO", "DESLOCAMENTO PARA PONTO BASE", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""
-            ],
-            "MOTOPATRULHAMENTO": [
-                "CHAMADA E INSTRUÇÃO", "", "", "", "", "", "", "", "", "", "", "",
-                "REALIZAÇÃO DO BANHO DE SOLE\nVISITACAO DE MILITARES", "REALIZACAO DO BANHO DE SOLE\nVISITACAO DE MILITARES", "REALIZACAD DO BANHO DE SOLE\nVISITACAO DE MILITARES", "REALIZACAO DO BANHO DE SOLE\nVISITACAO DE MILITARES",
-                "REALIZACAO DO BANHO DE SOLE\nVISITACAO DE MILITARES", "REALIZACAD DO BANHO DE SOLE\nVISITACAO DE MILITARES", "PONTO BASE NO PORTAO DO SALAD DO JURI (ENTRADA RUA CLAUDIO E. DE ALCANTARA)", "PONTO BASE NO PORTAO DO SALAO DO JURI (ENTRADA RUA CLAUDIO E. DE ALCANTARA)",
-                "PONTO BASE NO PORTAO DO SALAO DO JURI (ENTRADA RUA CLAUDIO E. DE ALCANTARA)", "PONTO BASE NO PORTAO DO SALAO DO JURI (ENTRADA RUA CLAUDIO E. DE ALCANTARA)", "PONTO BASE NO PORTAO DO SALAO DO JURI (ENTRADA RUA CLAUDIO E. DE ALCANTARA)", "ATUAR CONFORME ORDENS DO CPU ATE O ENCERRAMENTO DO TURNO",
-                "", "", "", "", "", "", "", "", "", ""
-            ],
-            "TATICO MOVEL": [
-                "", "", "", "", "", "", "", "", "", "", "", "",
-                "CHAMADA E INSTRUÇÃO", "", "", "", "", "PATRULHAMENTO SETOR 01/04", "PATRULHAMENTO SETOR 01/04\nPONTO BASE AV FARIA PEREIRA/AV RUI BARBOSA", "PATRULHAMENTO BAIRRO CENTRO\nPONTO BASE AV BUL BARBOSA/RUA ELMIRO ALVES DO NASCIMENTO",
-                "PATRULHAMENTO BAIRRO CENTRO\nPONTO BASE RUA PRESIDENTE VARGAS/RUA CEL JOAO CANDIDO DE AGUIAR", "PATRULHAMENTO BAIRRO CENTRO\nPONTO BASE RUA PRESIDENTE VARGAS/RUA CEL JOAO CANDIDO DE AGULAR", "PATRULHAMENTO BAIRRO CENTRO", "PATRULHAMENTO BAIRRO CENTRO\nPONTO BASE AV FARIA PEREIRA/AV RUI BARBOSA",
-                "PATRULHAMENTO BAIRRO CENTRO", "PONTO BASE RUA PRESIDENTE VARGAS/RUA CEL JQAR CANDIDO DE AGUIAR", "ATUAR CONFORME ORDENS DO CPU ATE O ENCERRAMENTO DO TURNO", "", "", "", "", "", "", ""
-            ]
-        };
-
-        function parseTime(timeStr) {
-            const parts = timeStr.split(':');
-            return parseInt(parts[0]) * 60 + parseInt(parts[1]);
-        }
-
-        function getCurrentTimeIndex() {
-            const now = new Date();
-            const currentMinutes = now.getHours() * 60 + now.getMinutes();
-
-            for (let i = 0; i < times.length; i++) {
-                const [start, end] = times[i].split(' - ');
-                const startMin = parseTime(start);
-                const endMin = parseTime(end);
-
-                if (currentMinutes >= startMin && currentMinutes <= endMin) {
-                    return i;
-                }
-            }
-            return -1;
-        }
-
-        let isFirstLoad = true;
-
-        function buildTable() {
-            const headerRow = document.getElementById('headerRow');
-            const tableBody = document.getElementById('tableBody');
-
-            headerRow.innerHTML = '<th>VIATURA</th>';
-            tableBody.innerHTML = '';
-
-            const activeIndex = getCurrentTimeIndex();
-
-            times.forEach((t, index) => {
-                const th = document.createElement('th');
-                th.innerText = t;
-                if (index === activeIndex) {
-                    th.classList.add('current-time-col');
-                }
-                headerRow.appendChild(th);
-            });
-
-            units.forEach(unit => {
-                const tr = document.createElement('tr');
-                const tdUnit = document.createElement('td');
-                tdUnit.innerText = unit;
-                tr.appendChild(tdUnit);
-
-                const unitSchedule = scheduleData[unit] || [];
-
-                times.forEach((t, index) => {
-                    const td = document.createElement('td');
-                    td.innerText = unitSchedule[index] || "";
-                    if (index === activeIndex) {
-                        td.classList.add('current-time-col');
-                    }
-                    tr.appendChild(td);
-                });
-
-                tableBody.appendChild(tr);
-            });
-
-            updateTimeMarker(activeIndex);
-
-            if (isFirstLoad && activeIndex !== -1) {
-                isFirstLoad = false;
-                setTimeout(() => {
-                    const container = document.getElementById('scrollContainer');
-                    const targetTh = headerRow.children[activeIndex + 1];
-                    if (targetTh) {
-                        container.scrollLeft = targetTh.offsetLeft - container.clientWidth / 2 + targetTh.clientWidth / 2;
-                    }
-                }, 200);
-            }
-        }
-
-        function updateTimeMarker(activeIndex) {
-            const marker = document.getElementById('timeMarker');
-            if (activeIndex === -1) {
-                marker.style.display = 'none';
-                return;
-            }
-
-            const headerRow = document.getElementById('headerRow');
-            const targetTh = headerRow.children[activeIndex + 1];
-
-            if (targetTh) {
-                const now = new Date();
-                const currentMinutes = now.getHours() * 60 + now.getMinutes();
-                const [startStr, endStr] = times[activeIndex].split(' - ');
-                const startMin = parseTime(startStr);
-                const endMin = parseTime(endStr);
-                
-                const progressRatio = Math.min(Math.max((currentMinutes - startMin) / (endMin - startMin), 0), 1);
-                
-                const leftPos = targetTh.offsetLeft + (targetTh.clientWidth * progressRatio);
-                marker.style.left = leftPos + 'px';
-                marker.style.display = 'block';
-            }
-        }
-
-        function updateClock() {
-            const now = new Date();
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
-            document.getElementById('clock-display').innerText = `${hours}:${minutes}:${seconds}`;
-
-            const activeIndex = getCurrentTimeIndex();
-            updateTimeMarker(activeIndex);
-        }
-
-        buildTable();
-        setInterval(updateClock, 1000);
-        setInterval(buildTable, 60000);
-        updateClock();
-    </script>
-</body>
-</html>
+                "PONTO BASE ESCOLA PROFESSORA CELIA LEMOS", "PATRULHAMENTO SETOR 3", "PATRULHAMENTO SETOR 3\nPONTO BASE
