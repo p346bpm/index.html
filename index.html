@@ -6,15 +6,13 @@
     <title>Cartão Programa - 2º Turno | PMMG Patrocínio</title>
     <style>
         :root {
-            --bg-dark: #0b0f19;
+            --bg-dark: #0f172a;
             --panel-bg: #1e293b;
-            --header-bg: #0f172a;
             --border-color: #334155;
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --accent-green: #22c55e;
-            --accent-red: #ef4444;
-            --highlight-bg: rgba(234, 179, 8, 0.22);
+            --highlight-bg: rgba(234, 179, 8, 0.25);
             --highlight-border: #eab308;
         }
 
@@ -35,34 +33,31 @@
         }
 
         header {
-            background-color: var(--header-bg);
+            background-color: var(--panel-bg);
             border-bottom: 1px solid var(--border-color);
-            padding: 10px 18px;
+            padding: 12px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-shrink: 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-            z-index: 100;
         }
 
         .header-title h1 {
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             font-weight: 700;
             letter-spacing: 0.5px;
             color: #fff;
-            text-transform: uppercase;
         }
 
         .header-title p {
-            font-size: 0.72rem;
+            font-size: 0.75rem;
             color: var(--text-muted);
         }
 
         .live-clock {
-            background: #050811;
+            background: #090d16;
             border: 1px solid var(--border-color);
-            padding: 5px 12px;
+            padding: 6px 12px;
             border-radius: 6px;
             font-family: monospace;
             font-size: 0.9rem;
@@ -92,7 +87,7 @@
             flex: 1;
             overflow: auto;
             position: relative;
-            background-color: var(--bg-dark);
+            background-color: #0b0f19;
         }
 
         table {
@@ -102,17 +97,15 @@
         }
 
         th, td {
-            padding: 8px 12px;
-            font-size: 0.76rem;
+            padding: 10px 14px;
+            font-size: 0.78rem;
             border-bottom: 1px solid var(--border-color);
             border-right: 1px solid var(--border-color);
             text-align: center;
             white-space: pre-wrap;
             vertical-align: middle;
-            line-height: 1.25;
         }
 
-        /* Congelamento do Cabeçalho Superior (Eixo X) */
         th {
             background-color: var(--panel-bg);
             color: var(--text-main);
@@ -120,11 +113,9 @@
             position: sticky;
             top: 0;
             z-index: 20;
-            height: 38px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.4);
         }
 
-        /* Congelamento da Coluna de Viaturas (Eixo Y) */
+        /* Coluna fixa de viaturas (Eixo Y) */
         th:first-child, td:first-child {
             position: sticky;
             left: 0;
@@ -134,64 +125,42 @@
             text-align: left;
             width: 140px;
             min-width: 140px;
-            box-shadow: 2px 0 6px rgba(0,0,0,0.4);
-            color: #38bdf8;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.3);
         }
 
-        /* Canto Superior Esquerdo Fixado (Cruzamento 2D) */
         th:first-child {
-            z-index: 30;
-            color: #fff;
-            background-color: #0f172a;
+            z-index: 30; /* Canto superior esquerdo fica por cima de tudo */
         }
 
         td {
-            background-color: #111827;
+            background-color: #131b2e;
             color: #cbd5e1;
             min-width: 150px;
             max-width: 180px;
-            height: 60px;
-        }
-
-        tr:nth-child(even) td {
-            background-color: #151f32;
+            height: 65px;
         }
 
         tr:hover td {
-            background-color: #1e2e4a;
+            background-color: #17223b;
         }
 
         tr:hover td:first-child {
-            background-color: var(--panel-bg);
+            background-color: #1e293b;
         }
 
-        /* Destaque Visual Intenso para a Faixa Horária Atual */
+        /* Destaque para a faixa horária atual */
         th.current-time-col {
-            background-color: #854d0e !important;
+            background-color: #713f12 !important;
             color: #fef08a !important;
             border-bottom: 3px solid #eab308;
-            font-weight: bold;
         }
 
         td.current-time-col {
             background-color: var(--highlight-bg) !important;
             border-left: 2px solid var(--highlight-border);
             border-right: 2px solid var(--highlight-border);
-            color: #ffffff;
-            font-weight: 600;
-            box-shadow: inset 0 0 10px rgba(234, 179, 8, 0.15);
-        }
-
-        /* Marcador de Tempo Neon */
-        .time-marker-line {
-            position: absolute;
-            top: 38px;
-            bottom: 0;
-            width: 2px;
-            background-color: var(--accent-red);
-            box-shadow: 0 0 8px var(--accent-red);
-            z-index: 15;
-            pointer-events: none;
+            color: #fff;
+            font-weight: 500;
         }
     </style>
 </head>
@@ -199,8 +168,8 @@
 
     <header>
         <div class="header-title">
-            <h1>CARTÃO PROGRAMA - 2º TURNO (PMMG PATROCÍNIO)</h1>
-            <p>Acompanhamento Tático em Tempo Real</p>
+            <h1>CARTÃO PROGRAMA - 2º TURNO (PATROCÍNIO/MG)</h1>
+            <p>Visualização Tática Operacional</p>
         </div>
         <div class="live-clock">
             <div class="live-dot"></div>
@@ -209,7 +178,6 @@
     </header>
 
     <div class="table-container" id="scrollContainer">
-        <div id="timeMarker" class="time-marker-line" style="display: none;"></div>
         <table id="progTable">
             <thead>
                 <tr id="headerRow">
@@ -360,20 +328,17 @@
                     return i;
                 }
             }
+            // Se estiver fora do horário, retorna -1
             return -1;
         }
-
-        let isFirstLoad = true;
 
         function buildTable() {
             const headerRow = document.getElementById('headerRow');
             const tableBody = document.getElementById('tableBody');
 
-            headerRow.innerHTML = '<th>VIATURA</th>';
-            tableBody.innerHTML = '';
-
             const activeIndex = getCurrentTimeIndex();
 
+            // Criar colunas de cabeçalho
             times.forEach((t, index) => {
                 const th = document.createElement('th');
                 th.innerText = t;
@@ -383,8 +348,11 @@
                 headerRow.appendChild(th);
             });
 
+            // Criar linhas de viaturas
             units.forEach(unit => {
                 const tr = document.createElement('tr');
+                
+                // Coluna fixa da viatura
                 const tdUnit = document.createElement('td');
                 tdUnit.innerText = unit;
                 tr.appendChild(tdUnit);
@@ -403,42 +371,15 @@
                 tableBody.appendChild(tr);
             });
 
-            updateTimeMarker(activeIndex);
-
-            if (isFirstLoad && activeIndex !== -1) {
-                isFirstLoad = false;
+            // Centralizar automaticamente na coluna atual ao carregar
+            if (activeIndex !== -1) {
                 setTimeout(() => {
                     const container = document.getElementById('scrollContainer');
                     const targetTh = headerRow.children[activeIndex + 1];
                     if (targetTh) {
                         container.scrollLeft = targetTh.offsetLeft - container.clientWidth / 2 + targetTh.clientWidth / 2;
                     }
-                }, 150);
-            }
-        }
-
-        function updateTimeMarker(activeIndex) {
-            const marker = document.getElementById('timeMarker');
-            if (activeIndex === -1) {
-                marker.style.display = 'none';
-                return;
-            }
-
-            const headerRow = document.getElementById('headerRow');
-            const targetTh = headerRow.children[activeIndex + 1];
-
-            if (targetTh) {
-                const now = new Date();
-                const currentMinutes = now.getHours() * 60 + now.getMinutes();
-                const [startStr, endStr] = times[activeIndex].split(' - ');
-                const startMin = parseTime(startStr);
-                const endMin = parseTime(endStr);
-                
-                const progressRatio = Math.min(Math.max((currentMinutes - startMin) / (endMin - startMin), 0), 1);
-                
-                const leftPos = targetTh.offsetLeft + (targetTh.clientWidth * progressRatio);
-                marker.style.left = leftPos + 'px';
-                marker.style.display = 'block';
+                }, 100);
             }
         }
 
@@ -448,14 +389,10 @@
             const minutes = String(now.getMinutes()).padStart(2, '0');
             const seconds = String(now.getSeconds()).padStart(2, '0');
             document.getElementById('clock-display').innerText = `${hours}:${minutes}:${seconds}`;
-
-            const activeIndex = getCurrentTimeIndex();
-            updateTimeMarker(activeIndex);
         }
 
         buildTable();
         setInterval(updateClock, 1000);
-        setInterval(buildTable, 60000); // Atualiza a tabela a cada minuto para trocar o destaque do bloco
         updateClock();
     </script>
 </body>
